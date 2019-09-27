@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">Nagarro</string>
+    <string name="messageWithLink">Account Already Exists ?<a href="Login"></a></string>
+</resources>

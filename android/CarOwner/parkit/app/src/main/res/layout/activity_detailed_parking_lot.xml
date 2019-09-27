@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".DetailedParkingLot"
+    android:gravity="center">
+
+    <!--name-->
+    <!--add-->
+    <!--ratings-->
+    <!--total-->
+    <!--current-->
+    <!--Price per hour-->
+
+        <TextView
+            android:layout_marginTop="100dp"
+            android:id="@+id/activity_detailed_parking_lot_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Sonu Parking Center"
+            android:gravity="center"
+            android:layout_marginBottom="40dp"
+            android:textSize="35sp"
+            android:fontFamily="@font/montserratbold"/>
+
+
+        <TextView
+        android:id="@+id/activity_detailed_parking_lot_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_detailed_parking_lot_ratings"
+        android:text="Navrang Theater, Near Azad Nagar Metro Sation Andheri West, Mumbai "
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratmedium"/>
+
+    <TextView
+        android:id="@+id/activity_detailed_parking_lot_ratings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_detailed_parking_lot_name"
+        android:text="Ratings"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratmedium"/>
+
+
+
+    <TextView
+        android:id="@+id/activity_detailed_parking_lot_ratings_value"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/activity_detailed_parking_lot_name"
+        android:text="5.0"
+        android:layout_toRightOf="@id/activity_detailed_parking_lot_ratings"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratregular"/>
+
+
+    <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Total Availability"
+            android:id="@+id/activity_detailed_parking_lot_total_availability"
+            android:layout_below="@id/activity_detailed_parking_lot_address"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:fontFamily="@font/montserratthin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:id="@+id/activity_detailed_parking_lot_total_availability_value"
+        android:layout_toRightOf="@id/activity_detailed_parking_lot_total_availability"
+        android:layout_below="@id/activity_detailed_parking_lot_address"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratregular"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/activity_detailed_parking_lot_current_availability"
+            android:layout_below="@id/activity_detailed_parking_lot_total_availability"
+            android:layout_height="wrap_content"
+            android:text="Current Availability"
+            android:textSize="18sp"
+            android:layout_margin="10dp"
+            android:padding="10dp"
+            android:fontFamily="@font/montserratthin"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_current_availability_value"
+        android:layout_below="@id/activity_detailed_parking_lot_total_availability"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/activity_detailed_parking_lot_current_availability"
+        android:text="-"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratregular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_differently_abled_availability"
+        android:layout_below="@id/activity_detailed_parking_lot_current_availability"
+        android:layout_height="wrap_content"
+        android:text="Differently Abled"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratthin"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_differently_abled_value"
+        android:layout_below="@id/activity_detailed_parking_lot_current_availability_value"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/activity_detailed_parking_lot_current_availability"
+        android:text="-"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratregular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_cost"
+        android:layout_below="@id/activity_detailed_parking_lot_differently_abled_availability"
+        android:layout_height="wrap_content"
+        android:text="Cost per Hour"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratthin"/>
+
+    <TextView
+        android:id="@+id/activity_detailed_parking_lot_show_on_maps"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Show on Google Maps"
+        android:layout_below="@id/activity_detailed_parking_lot_cost"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="45dp"
+        android:textColor="#ffc107"
+        android:fontFamily="@font/montserratblack"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_cost_value"
+        android:layout_below="@id/activity_detailed_parking_lot_differently_abled_value"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/activity_detailed_parking_lot_current_availability"
+        android:text="-"
+        android:textSize="18sp"
+        android:layout_margin="10dp"
+        android:padding="10dp"
+        android:fontFamily="@font/montserratregular"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:id="@+id/activity_detailed_parking_lot_update_parking_status"
+        android:layout_below="@id/activity_detailed_parking_lot_cost"
+        android:layout_height="wrap_content"
+        android:text="Update Current Status"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ffc107"
+        android:padding="10dp"
+        android:visibility="gone"
+        android:fontFamily="@font/montserratblack"/>
+
+
+    <Button
+        android:id="@+id/activity_detailed_parking_lot_btn_booknow"
+        android:layout_width="match_parent"
+        android:background="#ffc107"
+        android:layout_alignParentBottom="true"
+        android:textColor="#fff"
+        android:layout_height="wrap_content"
+        android:text="Book Now"/>
+
+</RelativeLayout>
