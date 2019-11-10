@@ -16,6 +16,7 @@ if(isset($_POST['email'])&&isset($_POST['password'])){
         $response['user_id']=$row[0];
         $response['user_name']=$row[1];
         $response['phone_no']=$row[2];
+        $response['carnum']=$row[6];
         echo json_encode($response);
     }else{
         $response['status']=2;

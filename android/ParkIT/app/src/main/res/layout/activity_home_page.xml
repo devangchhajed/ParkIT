@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HomePage">
+
+    <fragment
+        android:id="@+id/activity_home_page_fragment_map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+        <EditText
+            android:id="@+id/activity_home_page_edittext_searchlocation"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:elevation="5dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginTop="60dp"
+            android:layout_weight="2"
+            android:background="@drawable/myrect"
+            android:shadowDx="2"
+            android:shadowDy="1"
+            android:hint="Search Location"
+            android:gravity="center"
+            android:fontFamily="@font/montserratthin"/>
+
+       <Button
+           android:id="@+id/activity_home_page_btn_search_now"
+           android:layout_width="match_parent"
+           android:background="#7cb342"
+           android:layout_height="wrap_content"
+           android:text="Search Now"
+           android:layout_below="@id/activity_home_page_edittext_searchlocation"
+           android:textColor="#fff"
+           android:fontFamily="@font/montserratregular"
+           android:layout_marginStart="20dp"
+           android:layout_marginEnd="20dp"
+           android:layout_marginTop="8dp"
+           android:visibility="gone"/>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/activity_home_page_floating_button"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:backgroundTint="#7cb342"
+        app:borderWidth="0dp"
+        android:layout_above="@id/activity_home_page_button_searchbylocation"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="20dp"
+        android:src="@drawable/ic_user"
+        />
+
+
+    <Button
+        android:id="@+id/activity_home_page_button_searchbylocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Search Nearby Location"
+        android:textColor="#fff"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="20dp"
+        android:fontFamily="@font/montserratmedium"
+        android:background="#7cb342"/>
+
+
+
+</RelativeLayout>

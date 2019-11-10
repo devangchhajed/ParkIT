@@ -27,4 +27,6 @@ if(isset($_GET['pid'])){
 
 
 
+}else{
+    echo "Errro";
 }

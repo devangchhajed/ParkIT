@@ -10,6 +10,7 @@ import android.location.Geocoder;
 import android.os.Bundle;
 import android.telephony.SmsManager;
 import android.util.Log;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.android.volley.Request;
@@ -31,11 +32,13 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
+    TextView status;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
+        status = findViewById(R.id.status);
 
         SmsReciever.bindListener(new SmsListener() {
             @Override
@@ -72,6 +75,8 @@ public class MainActivity extends AppCompatActivity {
 
                         SmsManager smgr = SmsManager.getDefault();
                         smgr.sendTextMessage(sender,null,response ,null,null);
+                        status.setText(response+" - "+sender);
+                        finish();
 
                     }
                 }, new Response.ErrorListener() {
@@ -113,6 +118,7 @@ public class MainActivity extends AppCompatActivity {
 
                         SmsManager smgr = SmsManager.getDefault();
                         smgr.sendTextMessage(sender,null,response,null,null);
+                        status.setText(sender+"-"+response);
 
 
                     }
@@ -147,11 +153,15 @@ public class MainActivity extends AppCompatActivity {
 
             Log.e("offf", messageText);
             LatLng location = getLocationFromAddress(getApplicationContext(), messageText);
-            String lat=String.valueOf(location.latitude),lng=String.valueOf(location.longitude);
-            getListofLot(lat,lng,sender);
+            if(location!=null) {
+                Log.e("offf", location.latitude + "");
+                String lat = String.valueOf(location.latitude), lng = String.valueOf(location.longitude);
+                getListofLot(lat, lng, sender);
+            }
+            else{
+                Log.e("offf", "Location cant be converted");
+            }
         }
-
-
 
     }
 
@@ -159,7 +169,7 @@ public class MainActivity extends AppCompatActivity {
 
         Geocoder coder = new Geocoder(context);
         List<Address> address;
-        LatLng p1 = null;
+        LatLng p1 = new LatLng(19.0760,72.8777);
 
         try {
             // May throw an IOException

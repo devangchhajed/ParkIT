@@ -5,7 +5,7 @@ import java.util.List;
 
 public class AppConfig {
 
-    public static final String baseurl = "http://10.177.12.58/ParkIT/api/";
+    public static final String baseurl = "http://192.168.137.1/ParkIT/api/";
     public static final String registerurl = baseurl + "users/register.php";
     public static final String loginurl = baseurl + "users/login.php";
     public static final String placeslist = baseurl + "places/getplaceslist.php";

@@ -45,18 +45,22 @@
     $pwd = $_REQUEST['op_pwd'];
     $query = "INSERT INTO user (email, password, cat_id) VALUES ('".$name."', '".$pwd."', 4)";
     $result2 = $conn->query($query);
-    
+	//echo $query;
     //echo "<script>alert(\"Works\")";
     if($result2){
       $res = $conn->query("SELECT user_id FROM user WHERE email = '".$name."' AND password = '".$pwd."'");
+	  //echo "SELECT user_id FROM user WHERE email = '".$name."' AND password = '".$pwd."'";
       $r = mysqli_fetch_assoc($res);
       $last_id = $r['user_id'];
       $sql = "SELECT parking_lot_id FROM parking_lot_details WHERE user_id = ".$_SESSION['user_id'];
+	  //echo $sql;
       $result = $conn->query($sql);
       $row = mysqli_fetch_assoc($result);
-      var_dump($_SESSION['user_id']);
+      //var_dump($_SESSION['user_id']);
+      //var_dump($row);
       $pid = $row['parking_lot_id'];
       $sql = "INSERT INTO parking_lot_operator (user_id, parking_lot_id) VALUES(".$last_id.", ".$pid.")";
+	  //echo $sql;
       $result = $conn->query($sql);
       if($result){
         echo "<script>alert(\"Registered Successfully...!!!\")";

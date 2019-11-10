@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".BookedStatusPage"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/booked"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/montserratbold"
+        android:text="Booked Successfully"
+        android:textColor="#76E2D5"
+        android:gravity="center"
+        android:textSize="32sp"/>
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_marginTop="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/onlyrelative"
+        android:layout_centerHorizontal="true"
+
+        android:src="@drawable/done" />
+
+
+    <RelativeLayout
+        android:id="@+id/onlyrelative"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@id/booked">
+    <TextView
+        android:id="@+id/bookindidtext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="16sp"
+        android:text="Booking-id :"
+        android:fontFamily="@font/montserratbold"
+        android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:id="@+id/activity_booked_status_page_booking_id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="129483286512"
+        android:layout_toRightOf="@id/bookindidtext"
+
+        android:fontFamily="@font/montserratbold"
+        android:layout_marginTop="8dp"
+        android:textSize="16sp"/>
+    </RelativeLayout>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/direction"
+        android:layout_below="@id/image"
+        android:text="Get Direction"
+        android:textSize="25sp"
+        android:fontFamily="@font/montserratregular"
+        android:gravity="center"
+        android:layout_marginTop="160dp"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Check-out"
+        android:id="@+id/checkout"
+        android:fontFamily="@font/montserratmedium"
+        android:textColor="#f44336"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/direction"
+        android:gravity="center"/>
+
+</RelativeLayout>
